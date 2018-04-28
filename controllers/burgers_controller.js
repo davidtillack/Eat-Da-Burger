@@ -2,10 +2,14 @@ var express = require("express");
 
 var router = express.Router();
 
-// Import the model (cat.js) to use its database functions.
+// Import the model to use its database functions.
 var burger = require("../models/burger.js");
 
-// Creates all the routes
+// Create all the routes
+router.get("/", function(req, res) {
+  res.redirect("/burgers");
+});
+
 router.get("/burgers", function(req, res) {
   burger.selectAll(function(burgerData) {
     res.render("index", { burger_data: burgerData });
