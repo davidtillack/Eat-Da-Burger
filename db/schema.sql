@@ -5,8 +5,8 @@ CREATE table burgers
   id int NOT NULL
   AUTO_INCREMENT,
 	burger_name VARCHAR
-  (30) NOT NULL,
-    devoured BOOLEAN NOT NULL,	
+  (255) NOT NULL,
+  devoured BOOLEAN NOT NULL,	
 	PRIMARY KEY
   (id)
 );
