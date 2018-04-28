@@ -7,10 +7,10 @@ var burger = require("../models/burger.js");
 
 //Creating all the routes and seting up the logic within those routes
 router.get("/", function(req, res) {
-  res.redirect("/burger");
+  res.redirect("/burgers");
 });
 
-router.get("/burger", function(req, res) {
+router.get("/burgers", function(req, res) {
   burger.selectAll(function(burgerData) {
     res.render("index", { burger_data: burgerData });
   });
