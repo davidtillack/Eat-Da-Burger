@@ -22,14 +22,14 @@ router.post("/create", function(req, res) {
   });
 });
 
-router.put("/update/:id", function(req, res) {
-  burger.updateOne([req.body.devoured], [req, params.id], function() {
+router.put("/update/:ID", function(req, res) {
+  burger.updateOne([req.body.devoured], [req, params.ID], function() {
     res.redirect("/");
   });
 });
 
 router.delete("/delete/:id", function(req, res) {
-  burger.deleteOne([req.params.id], function() {
+  burger.deleteOne([req.params.ID], function() {
     res.redirect("/");
   });
 });
