@@ -4,6 +4,7 @@ var connection = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
+  socketPath: "/tmp/mysql.sock",
   database: "burgers_db"
 });
 
