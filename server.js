@@ -6,7 +6,6 @@ var path = require("path");
 
 // Basic properties for express server
 var app = express();
-var PORT = process.env.PORT || 8080;
 
 // BodyParser makes it easy for our server to interpret data sent to it.
 app.use(bodyParser.json());
@@ -26,6 +25,6 @@ app.set("view engine", "handlebars");
 app.use(express.static(__dirname + "/public"));
 
 // Listener
-app.listen(PORT, function() {
-  console.log("App listening on PORT: " + PORT);
+app.listen(process.env.PORT || 8080, function() {
+  console.log("App listening on PORT: " + process.env.PORT || 8080);
 });
