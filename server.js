@@ -1,5 +1,6 @@
 // NPM packages
 var express = require("express");
+var methodOverride = require("method-override");
 var bodyParser = require("body-parser");
 var path = require("path");
 
@@ -7,11 +8,14 @@ var path = require("path");
 var app = express();
 var PORT = process.env.PORT || 8080;
 
+// Router
+var router = require("./controllers/burgers_controller");
+app.use(router);
+
 // BodyParser makes it easy for our server to interpret data sent to it.
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.text());
-app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Routing files
 controllers = require("./controllers/burgers_controller.js");
