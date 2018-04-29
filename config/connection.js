@@ -1,10 +1,9 @@
 var mysql = require("mysql");
 
 var connection = mysql.createConnection({
-  host: "localhost",
+  socketPath: "/tmp/mysql.sock",
   user: "root",
   password: "",
-  socketPath: "/tmp/mysql.sock",
   database: "burgers_db"
 });
 
