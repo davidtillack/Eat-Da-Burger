@@ -1,10 +1,11 @@
 var mysql = require("mysql");
 
 var connection = mysql.createConnection({
-  socketPath: "/tmp/mysql.sock",
+  host: "localhost",
   user: "root",
   password: "",
-  database: "burgers_db"
+  database: "burgers_db",
+  socketPath: "/Applications/MAMP/tmp/mysql/mysql.sock"
 });
 
 connection.connect(function(err) {
