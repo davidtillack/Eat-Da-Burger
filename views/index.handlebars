@@ -5,7 +5,7 @@
     </div>
     <div class="col-xs-6" class="task">
       <div class="row">
-        {{#each burger_data}} {{#unless this.devoured}}
+        {{#each burger_data}} {{#unless this.devoured}} {{> burger-block}}
         <div class="col-xs-6">
           <pre>{{this.ID}}.{{this.burger_name}}</pre>
         </div>
