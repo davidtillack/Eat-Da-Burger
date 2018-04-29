@@ -8,19 +8,14 @@ var path = require("path");
 var app = express();
 var PORT = process.env.PORT || 8080;
 
-// Router
-var router = require("./controllers/burgers_controller");
-app.use(router);
-
 // BodyParser makes it easy for our server to interpret data sent to it.
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 
 // Routing files
-controllers = require("./controllers/burgers_controller.js");
-
-app.use(controllers);
+router = require("./controllers/burgers_controller");
+app.use(router);
 
 //Handlebars
 var exphbs = require("express-handlebars");
