@@ -18,11 +18,6 @@ var burger = {
     ) {
       response(res);
     });
-  },
-  deleteOne: function(condition, response) {
-    orm.deleteOne("burgers", "id", condition, function(res) {
-      response(res);
-    });
   }
 };
 

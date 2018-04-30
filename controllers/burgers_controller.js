@@ -23,7 +23,7 @@ router.post("/burgers/create", function(req, res) {
 });
 
 router.put("/burgers/update", function(req, res) {
-  burger.updateOne([req.body.burger_id], [req, params.ID], function() {
+  burger.updateOne([req.body.burger_id], function() {
     res.redirect("/");
   });
 });
